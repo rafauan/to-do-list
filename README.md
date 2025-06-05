@@ -1,6 +1,6 @@
 # To-Do List
 
-Prosta system zarządzania zadaniami z możliwością dodawania, edytowania, usuwania oraz oznaczania zadań jako ukończone. Projekt składa się z backendu PHP (Laravel) oraz frontendowej aplikacji w Vue.js z Tailwind CSS.
+Prosty system zarządzania zadaniami z możliwością dodawania, edytowania, usuwania oraz oznaczania zadań jako ukończone. Projekt składa się z backendu PHP (Laravel) oraz frontendowej aplikacji w Vue.js z Tailwind CSS.
 
 
 

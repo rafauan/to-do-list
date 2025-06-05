@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import TaskForm from './TaskForm.vue'
 
+const apiUrl = import.meta.env.VITE_API_URL
 const tasks = ref([])
 const selectedTask = ref(null)
 const showButtons = ref(false)
@@ -10,7 +11,7 @@ const errorMessage = ref('')
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://localhost:8000/api/tasks')
+    const response = await fetch(`${apiUrl}/tasks`)
     const data = await response.json()
     tasks.value = data.tasks || []
   } catch (error) {
@@ -40,7 +41,7 @@ const formatStatus = (status) => {
 
 const addTask = async (task) => {
   try {
-    const response = await fetch('http://localhost:8000/api/tasks', {
+    const response = await fetch(`${apiUrl}/tasks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +68,7 @@ const editTask = async (task) => {
   if (!selectedTask.value) return
 
   try {
-    const response = await fetch(`http://localhost:8000/api/tasks/${selectedTask.value.id}`, {
+    const response = await fetch(`${apiUrl}/tasks/${selectedTask.value.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -99,7 +100,7 @@ const removeTask = async () => {
   if (!selectedTask.value) return
 
   try {
-    const response = await fetch(`http://localhost:8000/api/tasks/${selectedTask.value.id}`, {
+    const response = await fetch(`${apiUrl}/tasks/${selectedTask.value.id}`, {
       method: 'DELETE',
     })
 
