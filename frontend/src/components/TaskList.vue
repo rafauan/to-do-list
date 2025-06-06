@@ -147,7 +147,7 @@ const closeModal = () => {
             Edit
           </button>
           <button
-            v-if="showButtons"
+            v-if="showButtons && selectedTask && selectedTask.status !== 'completed'"
             @click="showModal = 'markStatus'"
             class="rounded-md text-sm bg-gray-600 font-medium text-white px-4 py-2 hover:cursor-pointer hover:bg-white hover:text-gray-600 hover:border-gray-600 border-2 border-gray-600 transition-colors duration-300"
           >

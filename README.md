@@ -21,7 +21,7 @@ Serwer działa na adresie http://127.0.0.1:8000 albo na http://localhost:8000
 Do repozytorium jest dodany plik database.sql, więc migracja nie jest wymagana.
     
 
-## Frontend
+# Frontend
 
 Aby uruchomić część frontendową należy wykonać polecenia
 
