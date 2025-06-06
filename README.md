@@ -17,8 +17,8 @@ Instrukcja instalacji części backendowej
     cd backend/
     composer install
     php artisan serve
-Serwer działa na adresie http://127.0.0.1:8000 albo na http://localhost:8000
-Do repozytorium jest dodany plik database.sql, więc migracja nie jest wymagana.
+Serwer działa na adresie http://127.0.0.1:8000 lub http://localhost:8000.
+Do repozytorium dodany został plik database.sql, więc uruchomienie migracji nie jest wymagane.
     
 
 # Frontend
